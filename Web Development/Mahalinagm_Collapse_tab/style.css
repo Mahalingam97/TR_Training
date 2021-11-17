@@ -33,23 +33,18 @@ flex-direction: column;
     
 }
 .faq-body{
-    margin: auto;
+    margin: 0px 0px 20px 0px;
     width: 60%; 
-   padding: auto;
-   margin-bottom: 20px;
-   
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
 }
 .active{
     margin-bottom: 0px;
 }
 .faq-page:hover {
     background-color: #f5f0f0;
-}
-.faq-body {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
 }
 .faq-page::after {
     content: '\02795';
