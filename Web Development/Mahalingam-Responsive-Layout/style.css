@@ -1,6 +1,6 @@
 .container{
     text-align: center; 
-    font-family: caveat_font;
+    font-family: caveat_font,Sans-serif;
 }
 @font-face {
     font-family: Caveat_font;
