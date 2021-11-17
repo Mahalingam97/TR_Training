@@ -1,12 +1,12 @@
 var faq = document.querySelectorAll(".faq-page");
 var question=[...faq]; 
-question.forEach((faq,index) => {
-    faq.addEventListener("click", function () { 
+question.forEach((faq_ques,index) => {
+    faq_ques.addEventListener("click", function () { 
         let closeindex=closefunction();
         if(closeindex===index)
           return true;
-        faq.classList.toggle("active") 
-        var body = faq.nextElementSibling; 
+        faq_ques.classList.toggle("active") 
+        var body = faq_ques.nextElementSibling; 
         body.style.display= (body.style.display === "block") ? "none": "block";   
         });
 });
