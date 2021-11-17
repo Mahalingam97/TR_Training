@@ -17,13 +17,13 @@ function readFormData() {
 function insertNewRecord(data) {
     var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    let cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullName;
-    cell2 = newRow.insertCell(1);
+    let cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.Age;
-    cell3 = newRow.insertCell(2);
+    let cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.Gender;
-    cell4 = newRow.insertCell(3);
+    let cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.Hobby;
     cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
@@ -34,8 +34,8 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("Age").value = "";
     var gender= document.getElementsByClassName("Gender");
-    for(var index=0;index<gender.length;index++)
-     {  gender[index].checked = false;}
+    for(let gen of gender)
+     {  gen.checked = false;}
     document.getElementById("Hobby").value="";    
     selectedRow = null;
 }
@@ -63,7 +63,7 @@ function updateRecord(formData) {
 
 function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        let row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
     }
@@ -75,7 +75,7 @@ function validate() {
         alert("Enter your FullName");
         return false;
     } 
-    else if(regex.test(name)==false || name.length<2)
+    else if(!regex.test(name) || name.length<2)
     {
         alert("Please Check your name");
         return false;
