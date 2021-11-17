@@ -1,4 +1,4 @@
-faq_con=document.getElementById("faq-questions");
+const faq_con=document.getElementById("faq-questions");
 
 var faq_click=document.nextSibling;
 console.log(faq_click)
